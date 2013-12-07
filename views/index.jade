@@ -1,6 +1,11 @@
 extends layout
 
 block content
+  
   div(class="container")
-    h2 Hello #{name}
-    <button type="button" class="btn btn-default">Default</button>
+    div(class="row")
+      center
+        img(id="big-img" src="../images/tedxnugraphic.png")
+        p On April 12, 2014, TED comes to Northwestern.
+        form(action="/apply")
+          button(class="btn btn-danger" type="submit") Apply Now

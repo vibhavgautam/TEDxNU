@@ -1,5 +1,43 @@
 extends layout
 
 block content
-  h2 Hello #{name}
-  
+  div(class="container")
+    div(class="row")
+      div(class="span12")
+        h1 TEDx Northwestern U 2014 Speaker Application
+    div(class="row")
+      div(class="span6")
+        p Applying to speak at TEDx Northwestern U is easy! You have your great idea and we want to hear it! 
+        p All videos should be approximately one minute in length. Please host this video on YouTube or Vimeo and include a link below. If you wish to make your video password protected, please make the password "tedxnorthwesternu."
+    form(action="/apply" method='POST')
+      div(class="row")
+        div(class="span3")
+          p Name:
+          input(type="text" placeholder="First Last" name="name")
+        div(class="span3")
+          p Email Address:
+          input(type="email" placeholder="myname@u.northwestern.edu" name="email")
+      div(class="row")
+        div(class="span3")
+          p Select one:
+          select(class="form-control" name="status")
+            option(name="student") Student
+            option(name="faculty") Faculty
+            option(name="alum") Alum
+      div(class="row")
+        div(class="span6")
+          p Title of your talk (this need not be finalized):
+          input(type="text" class="span6" placeholder="" name="title")
+      div(class="row")
+        div(class="span6")
+          p Link to your video:
+          input(type="text" class="span6" placeholder="http://www.youtube.com/..." name="video_link")
+      div(class="row")
+        div(class="span6")
+          p Tell us why you are excited to be a part of TED x Northwestern U!:
+          textarea(class="form-control span6" rows="5" placeholder="Because it's awesome, obviously..." name="description")
+      div(class="row")
+        div(class="span6")
+          input(type="submit" class="btn btn-primary" value="Submit Application")
+
+

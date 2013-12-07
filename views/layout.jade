@@ -1,11 +1,13 @@
 doctype 5
 html
   head
-    title TED x Northwestern U 2014
+    title TEDx Northwestern U 2014
     link(rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css")
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     link(rel='stylesheet', href='../stylesheets/style.css')
-  body(style="padding-top: 50px;")
+  body()
 
+    //- NAV BAR
     div(class="navbar navbar-fixed-top navbar-inverse")
       div(class="navbar-inner")
         div(class="container")
@@ -13,36 +15,19 @@ html
             span(class="icon-bar")
             span(class="icon-bar")
             span(class="icon-bar")
-          a(class="brand") TED x Northwestern U
+          //- a(class="brand") TED x Northwestern U
           div(class="nav-collapse collapse")
             ul(class="nav pull-right")
               li
-                a(href="#") About
-              li
-                a(href="#") Team
-              li
-                button(type="button" class="btn btn-danger navbar-btn") Apply
-    //- NAV BAR
-    //- <div class="navbar navbar-your-class navbar-static-top">
-    //-   <div class="navbar-inner">
-    //-     <div class="container">
-    //-       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button> <a class="brand" href="#">Your Logo</a>
-    //-           <div class="nav-collapse collapse">
-    //-             <ul class="nav">
-    //-                 <li class="active"><a href="#">Home</a></li>
-    //-                 <li><a href="#about">About</a></li>
-    //-                 <li><a href="#contact">Contact</a></li>
-    //-              </ul>
-    //-         </div><!--/.nav-collapse -->
-    //-        </div>
-    //-   </div>
-    //- </div>
+                form(action="/apply")
+                  button(type="submit" class="btn btn-danger navbar-btn") Apply
 
-
+    div(id="fakerow")
   
 
 
     //- CONTENT
-    block content
+    div(class="row" id="main-background")
+      block content
     script(type='text/javascript' src='../javascripts/jquery.js')
     script(type='text/javascript' src='../javascripts/bootstrap.js')

@@ -6,7 +6,18 @@ var Schema = mongoose.Schema;
 
 // Mongoose data models
 
-
+var submissionmodel = mongoose.model('submissionmodel', {
+  name: String,
+  submission_id: Number,
+  email: String,
+  status: String,
+  title: String,
+  video_link: String,
+  description: String,
+  finalist: Number,
+  selected: Number,
+  submitted: { type: Date, default: Date.now }
+})
 
 
 /**
@@ -21,7 +32,7 @@ var app = express();
 app.use(express.bodyParser()); // Allows parsing of ajax requests
 
 
-var routes = require('./routes')(app, mongoose);
+var routes = require('./routes')(app, mongoose, submissionmodel);
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');

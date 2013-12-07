@@ -1,0 +1,35 @@
+body {
+  font-family: "Helvetica", sans-serif;
+}
+
+#fakerow {
+  padding-top: 50px;
+}
+
+#main-background {
+  height: 100%;
+}
+
+#big-img {
+  padding-top: 10%;
+  padding-bottom: 20px;
+}
+
+
+@media screen and (min-width: 320px) {
+  #big-img {
+    width:90%;
+
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #big-img {
+    width:60%;
+  }
+
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
