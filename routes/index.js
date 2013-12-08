@@ -18,11 +18,23 @@ module.exports = function(app, mongoose, submissionmodel) {
   });
 
 
+
+
+
+
+//   *******************************************************
+// 
+// 
+//  EVERYTHING BELOW IS ABOUT THE APPLICATION AND RELATED PAGES
+// 
+// 
+//   *******************************************************  
+
+
   // APPLICATION PAGE
   app.get('/apply', function(req, res) {
     res.render('apply', { });
 
-    
   });
   app.post('/apply', function(req,res) {
 
@@ -56,6 +68,7 @@ module.exports = function(app, mongoose, submissionmodel) {
         status: req.body.status,
         video_link: req.body.video_link,
         description: req.body.description,
+        votes: 0,
         finalist: 0,
         selected: 0
       });
@@ -86,7 +99,6 @@ module.exports = function(app, mongoose, submissionmodel) {
   });
 
   // VIEW SUBMISSIONS PAGE
-
   app.get('/viewapps', function(req, res) {
     res.render('login', { });
   });
@@ -162,16 +174,10 @@ module.exports = function(app, mongoose, submissionmodel) {
     res.render('loginfailure', { });
   });
 
-
-
-
-  // MAKE FINALIST
-  // need to implement
-
-  // MAKE SELECTED SPEAKER
-  // need to implement
-
-
-
 }
+
+
+
+
+
 

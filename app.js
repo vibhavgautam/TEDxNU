@@ -16,6 +16,7 @@ var submissionmodel = mongoose.model('submissionmodel', {
   description: String,
   finalist: Number,
   selected: Number,
+  votes: { type: Number, default: 0},
   submitted: { type: Date, default: Date.now }
 })
 
