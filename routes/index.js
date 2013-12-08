@@ -29,7 +29,7 @@ module.exports = function(app, mongoose, submissionmodel) {
     // GET ID
     // if no applications already, make id 1
     // otherwise highest existing id + 1
-    submissionmodel.findOne().sort('id').select('submission_id').exec(function(err, results){
+    submissionmodel.findOne().sort('-submission_id').select('submission_id').exec(function(err, results){
       console.log("QUERY RESULTS:");
       console.log(results);
 
@@ -39,18 +39,18 @@ module.exports = function(app, mongoose, submissionmodel) {
       }else{
 
         if(results==null){
-          id = 1;
+          new_id = 1;
         } else {
-          id = results.submission_id+1;
+          new_id = results.submission_id+1;
         };
       };
       console.log('NEW ID:');
-      console.log(id);
+      console.log(new_id);
 
       // Create submissionmodel in database
       var submission = new submissionmodel({
         name: req.body.name,
-        submission_id: id,
+        submission_id: new_id,
         email: req.body.email,
         title: req.body.title,
         status: req.body.status,
@@ -65,6 +65,7 @@ module.exports = function(app, mongoose, submissionmodel) {
           console.log('Application not submitted \n');
           console.log('Applicant: ' + req.body.name);
           console.log('Video link: ' + req.body.video_link);
+          console.log('New ID: ' + new_id);
           res.redirect('/apply/failure');
         }else{
           console.log('Application submitted successfully \n')
@@ -91,10 +92,6 @@ module.exports = function(app, mongoose, submissionmodel) {
   });
   app.post('/viewapps', function(req, res) {
     if(req.body.password=="1deasworthsharing"){
-      // var classification = req.params.classification;
-      // if(classification=="finalists"){
-
-      // }
 
       var query_one = submissionmodel.find({}, "name email submission_id status title video_link finalist selected description", function(err, results_one){
         var all_submissions = results_one;
@@ -112,11 +109,67 @@ module.exports = function(app, mongoose, submissionmodel) {
     }
   });
 
+  // MAKE FINALIST
+  app.post('/makefinalist', function(req, res) {
+    var this_id = req.body.submission_id;
+    submissionmodel.update({submission_id:this_id}, { $set: { finalist: 1}}, function(err, results){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(results);
+      }
+    });
+  });
+
+  // REMOVE FINALIST
+  app.post('/removefinalist', function(req, res) {
+    var this_id = req.body.submission_id;
+    submissionmodel.update({submission_id:this_id}, { $set: { finalist: 0}}, function(err, results){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(results);
+      }
+    });
+  });
+
+  // MAKE SELECTED SPEAKER
+  app.post('/makespeaker', function(req, res) {
+    var this_id = req.body.submission_id;
+    submissionmodel.update({submission_id:this_id}, { $set: { selected: 1}}, function(err, results){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(results);
+      }
+    });
+  });
+
+  // REMOVE  SELECTED SPEAKER
+  app.post('/removespeaker', function(req, res) {
+    var this_id = req.body.submission_id;
+    submissionmodel.update({submission_id:this_id}, { $set: { selected: 0}}, function(err, results){
+      if(err){
+        console.log(err);
+      } else {
+        console.log(results);
+      }
+    });
+  });
+
   // LOGIN FAILURE
   app.get('/loginfailure', function(req, res){
     res.render('loginfailure', { });
   });
 
+
+
+
+  // MAKE FINALIST
+  // need to implement
+
+  // MAKE SELECTED SPEAKER
+  // need to implement
 
 
 
