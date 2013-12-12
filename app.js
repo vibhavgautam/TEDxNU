@@ -14,9 +14,10 @@ var submissionmodel = mongoose.model('submissionmodel', {
   title: String,
   video_link: String,
   description: String,
+  rightperson: String,
   finalist: Number,
   selected: Number,
-  votes: { type: Number, default: 0},
+  votes: { type: Number, default: 0 },
   submitted: { type: Date, default: Date.now }
 })
 
@@ -24,8 +25,6 @@ var submissionmodel = mongoose.model('submissionmodel', {
 /**
  * Module dependencies.
  */
-
-
 
 var express = require('express');
 

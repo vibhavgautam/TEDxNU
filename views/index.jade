@@ -4,8 +4,16 @@ block content
   
   div(class="container")
     div(class="row")
-      center
-        img(id="big-img" src="../images/tedxnugraphic.png")
-        p On April 12, 2014, TED comes to Northwestern.
-        form(action="/apply")
-          button(class="btn btn-danger" type="submit") Apply Now
+      div(class="span8 offset2")
+        center
+          img(id="big-img" src="../images/tedxnugraphic.png")
+      div(class="span6 offset3")
+        p(class="lead") What is TED?
+        p TED is a nonprofit that began in 1984 as an annual conference devoted to Technology, Entertainment and Design. TEDTalks now covers science, arts, politics, global issues, architecture, music and more under their umbrella. At the heart of it's philosophy is the tenet of bringing people together to share "Ideas Worth Spreading."
+        p(class="lead") What is TEDx?
+        p In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. 
+        p(class="lead") Who will speak at TEDx NorthwesternU?
+        p Three speakers will present on April 12, 2014: three students, three faculty and three alumni. Have an idea for a talk? Apply below by January 15, 2014!
+        center
+          form(action="/apply")
+            button(class="btn btn-danger" type="submit") Apply

@@ -7,8 +7,9 @@ block content
         h1 TEDx Northwestern U 2014 Speaker Application
     div(class="row")
       div(class="span6")
-        p Applying to speak at TEDx Northwestern U is easy! You have your great idea and we want to hear it! 
-        p All videos should be approximately one minute in length. Please host this video on YouTube or Vimeo and include a link below. If you wish to make your video password protected, please make the password "tedxnorthwesternu."
+        p TEDX NorthwesternU 2014 will highlight the innovative ideas of the Northwestern University community with “genius talks” from three faculty members, three students and three alumni with the theme, “Crossing Paths.” This  day-long live experience April 12, 2014 will tell the story of innovation and thought leadership at Northwestern on Evanston’s campus and also livestreamed to an audience worldwide and later on TED.com.
+        p To apply, please create a video <strong>no longer than 1 minute in length</strong> and answer the questions below. You may host the video wherever you like.
+        p <strong>Applications are due by January 15, 2014!</strong>
     form(action="/apply" method='POST')
       div(class="row")
         div(class="span3")
@@ -30,12 +31,16 @@ block content
           input(type="text" class="span6" placeholder="" name="title")
       div(class="row")
         div(class="span6")
-          p Link to your video:
+          p Link to your video (no longer than 1 minute in length):
           input(type="text" class="span6" placeholder="http://www.youtube.com/..." name="video_link")
       div(class="row")
         div(class="span6")
-          p Tell us why you are excited to be a part of TED x Northwestern U!:
-          textarea(class="form-control span6" rows="5" placeholder="Because it's awesome, obviously..." name="description")
+          p In 100 words or less, describe your idea worth sharing and how it pertains the theme "Crossing Paths."
+          textarea(class="form-control span6" rows="5" name="description")
+      div(class="row")
+        div(class="span6")
+          p In 100 words or less, tell us why you are the right person to speak about this topic at TEDx NorthwesternU?
+          textarea(class="form-control span6" rows="5" name="rightperson")
       div(class="row")
         div(class="span6")
           input(type="submit" class="btn btn-primary" value="Submit Application")

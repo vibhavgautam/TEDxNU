@@ -20,6 +20,13 @@ module.exports = function(app, mongoose, submissionmodel) {
 
 
 
+  // TEAM PAGE
+
+
+
+
+
+
 
 
 //   *******************************************************
@@ -34,10 +41,8 @@ module.exports = function(app, mongoose, submissionmodel) {
   // APPLICATION PAGE
   app.get('/apply', function(req, res) {
     res.render('apply', { });
-
   });
   app.post('/apply', function(req,res) {
-
     // GET ID
     // if no applications already, make id 1
     // otherwise highest existing id + 1
@@ -68,6 +73,7 @@ module.exports = function(app, mongoose, submissionmodel) {
         status: req.body.status,
         video_link: req.body.video_link,
         description: req.body.description,
+        rightperson: req.body.rightperson,
         votes: 0,
         finalist: 0,
         selected: 0
@@ -105,11 +111,11 @@ module.exports = function(app, mongoose, submissionmodel) {
   app.post('/viewapps', function(req, res) {
     if(req.body.password=="1deasworthsharing"){
 
-      var query_one = submissionmodel.find({}, "name email submission_id status title video_link finalist selected description", function(err, results_one){
+      var query_one = submissionmodel.find({}, "name email submission_id status title video_link finalist selected description rightperson", function(err, results_one){
         var all_submissions = results_one;
-        var query_two = submissionmodel.find({finalist: 1}, "name email submission_id status title video_link finalist selected description", function(err, results_two){
+        var query_two = submissionmodel.find({finalist: 1}, "name email submission_id status title video_link finalist selected description rightperson", function(err, results_two){
           var submission_finalists = results_two;
-          var query_three = submissionmodel.find({selected: 1}, "name email submission_id title status video_link finalist selected description", function(err, results_three){
+          var query_three = submissionmodel.find({selected: 1}, "name email submission_id title status video_link finalist selected description rightperson", function(err, results_three){
             var selected_submissions = results_three;
             
             res.render('viewapps', { submissions : all_submissions, finalists : submission_finalists, selected : selected_submissions});
@@ -173,6 +179,7 @@ module.exports = function(app, mongoose, submissionmodel) {
   app.get('/loginfailure', function(req, res){
     res.render('loginfailure', { });
   });
+
 
 }
 
