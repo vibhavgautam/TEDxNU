@@ -1,0 +1,151 @@
+extends layout
+
+block content
+  script(type='text/javascript' src='../javascripts/viewapps.js')
+  div(class="container")
+    div(class="row")
+      div(class="span12")
+        h1 Submitted Applications for TED x NorthwesternU 2014
+    
+
+    div(class="nav nav-tabs")
+      li
+        a(href="#all_submissions_pane" data-toggle="tab") All submissions
+      li
+        a(href="#finalist_submissions_pane" data-toggle="tab") Finalists
+      li
+        a(href="#selected_submissions_pane" data-toggle="tab") Selected Speakers
+
+
+
+    div(class="row")
+      div(class="span12")
+        div(class="tab-content")
+
+          //- Pane for all submissions
+          div(class="tab-pane fade" id="all_submissions_pane")
+            div(class="table-responsive")
+              table(class="table table-striped")
+                thead
+                  tr
+                    th Name:
+                    th Status:
+                    th Title:
+                    th Video link:
+                    th Make Finalist
+                    th Select for TEDx
+                tbody
+                  for submission in submissions
+                    - var a = "#" + submission.submission_id + "1";
+                    tr(data-toggle="collapse" data-target=a class="accordion-toggle")
+                      td #{submission.name}
+                      td #{submission.status}
+                      td #{submission.title}
+                      td #{submission.video_link}
+                      td 
+                        //- This changes based on whether the person is already a finalist or not
+                        if (submission.finalist==0)
+                          form(action="/makefinalist" method="POST")
+                            input(type="hidden" name="submission_id" value=submission.submission_id)
+                            button(type="submit" class="btn btn-default") Make Finalist
+                        else 
+                          button(type="button" class="btn btn-success") Already a finalist
+                      td 
+                        //- This changes based on whether the person is already a selected speaker or not
+                        if (submission.selected==0)
+                          form(action="/makespeaker" method="POST")
+                            input(type="hidden" name="submission_id" value=submission.submission_id)
+                            button(type="submit" class="btn btn-default") Select for TEDx
+                        else
+                          button(type="button" class="btn btn-success") Already selected
+                    tr
+                      td(colspan="6" class="hiddenRow")
+                        div(class="accordion-body collapse" id=submission.submission_id+"1") 
+                          p <strong>Description of topic:</strong>
+                          p #{submission.description}
+                          p <strong>Why he/she is the right person to speak about this topic:</strong>
+                          p #{submission.rightperson}
+
+
+          //- Finalists pane
+          div(class="tab-pane fade" id="finalist_submissions_pane")
+            div(class="table-responsive")
+              table(class="table table-striped")
+                thead
+                  tr
+                    th Name:
+                    th Status:
+                    th Title:
+                    th Video link:
+                    th Make Finalist
+                    th Select for TEDx
+                tbody
+                  for submission in finalists
+                    - var a = "#" + submission.submission_id + "2"
+                    tr(data-toggle="collapse" data-target=a class="accordion-toggle")
+                      td #{submission.name}
+                      td #{submission.status}
+                      td #{submission.title}
+                      td #{submission.video_link}
+                      td 
+                        form(action="/removefinalist" method="POST")
+                          input(type="hidden" name="submission_id" value=submission.submission_id)
+                          button(type="submit" class="btn btn-danger") Delete from finalists
+                      td 
+                        if (submission.selected==0)
+                          form(action="/makespeaker" method="POST")
+                            input(type="hidden" name="submission_id" value=submission.submission_id)
+                            button(type="submit" class="btn btn-default") Select for TEDx
+                        else
+                          button(type="button" class="btn btn-success") Selected as speaker
+                    tr
+                      td(colspan="6" class="hiddenRow")
+                        div(class="accordion-body collapse" id=submission.submission_id+"2") 
+                          p <strong>Why he/she wants to be a part of TEDx Northwestern U:</strong>
+                          p #{submission.description}
+
+
+          //- Selected speakers pane
+          div(class="tab-pane fade" id="selected_submissions_pane")
+            div(class="table-responsive")
+              table(class="table table-striped")
+                thead
+                  tr
+                    th Name:
+                    th Status:
+                    th Title:
+                    th Video link:
+                    th Make Finalist
+                    th Select for TEDx
+                tbody
+                  for submission in selected
+                    - var a = "#" + submission.submission_id +"3"
+                    tr(data-toggle="collapse" data-target=a class="accordion-toggle")
+                      td #{submission.name}
+                      td #{submission.status}
+                      td #{submission.title}
+                      td #{submission.video_link}
+                      td 
+                        if (submission.finalist==0)
+                          form(action="/makefinalist" method="POST")
+                            input(type="hidden" name="submission_id" value=submission.submission_id)
+                            button(type="submit" class="btn btn-default") Make Finalist
+                        else 
+                          button(type="button" class="btn btn-success") Already a finalist
+                      td 
+                        form(action="/removespeaker" method="POST")
+                          input(type="hidden" name="submission_id" value=submission.submission_id)
+                          button(type="submit" class="btn btn-danger") Delete from selected speakers
+                    tr
+                      td(colspan="6" class="hiddenRow")
+                        div(class="accordion-body collapse" id=submission.submission_id+"3") 
+                          p <strong>Why he/she wants to be a part of TEDx Northwestern U:</strong>
+                          p #{submission.description}
+
+
+
+
+
+
+
+

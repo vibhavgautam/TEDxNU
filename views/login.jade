@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="row")
+      h1 You are attempting to access a private area of the website
+      h3 Please enter the password below:
+      form(action="/viewapps" method="POST")
+        input(type="password" name="password")
+        br
+        button(type="submit" class="btn btn-primary") Log In
+
