@@ -8,7 +8,7 @@ html
   body()
 
     //- NAV BAR
-    div(class="navbar navbar-fixed-top navbar-inverse")
+    div(class="navbar navbar-fixed-top")
       div(class="navbar-inner")
         div(class="container")
           a(class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse")
@@ -16,18 +16,19 @@ html
             span(class="icon-bar")
             span(class="icon-bar")
           //- a(class="brand") TED x Northwestern U
+          img(class="brand" style="height:25px;" src="../images/tedxnu-brand.png")
           div(class="nav-collapse collapse")
             ul(class="nav pull-right")
               li
-                form(action="/apply")
-                  button(type="submit" class="btn btn-danger navbar-btn") Apply
+                div: a(class="btn btn-primary navbar-btn" href="/apply") Apply
 
     div(id="fakerow")
   
 
 
     //- CONTENT
-    div(class="row" id="main-background")
-      block content
+    
+    
     script(type='text/javascript' src='../javascripts/jquery.js')
     script(type='text/javascript' src='../javascripts/bootstrap.js')
+    block content
