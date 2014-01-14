@@ -41,7 +41,8 @@ block content
                       td #{submission.name}
                       td #{submission.status}
                       td #{submission.title}
-                      td #{submission.video_link}
+                      td 
+                        a(href=submission.video_link) Link
                       td 
                         //- This changes based on whether the person is already a finalist or not
                         if (submission.finalist==0)

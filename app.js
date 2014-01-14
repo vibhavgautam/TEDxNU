@@ -1,8 +1,8 @@
 
 // Mongoose database stuff
 var mongoose = require('mongoose');
-//mongoose.connect('mongodb://cdmcmahon:f0rtun3!@ds061148.mongolab.com:61148/tedxdb');
-mongoose.connect('mongodb://localhost/tedxdb');
+mongoose.connect('mongodb://cdmcmahon:f0rtun3!@ds061148.mongolab.com:61148/tedxdb');
+//mongoose.connect('mongodb://localhost/tedxdb');
 var Schema = mongoose.Schema;
 
 // Mongoose data models

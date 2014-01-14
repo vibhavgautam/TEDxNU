@@ -63,36 +63,44 @@ module.exports = function(app, mongoose, submissionmodel) {
       };
       console.log('NEW ID:');
       console.log(new_id);
+      if(req.body.name == "" ||
+        req.body.email == "" ||
+        req.body.video_link == "" ||
+        req.body.description == "" ||
+        req.body.rightperson == ""){
+        res.redirect('/apply/failure');
+      }else {
 
-      // Create submissionmodel in database
-      var submission = new submissionmodel({
-        name: req.body.name,
-        submission_id: new_id,
-        email: req.body.email,
-        title: req.body.title,
-        status: req.body.status,
-        video_link: req.body.video_link,
-        description: req.body.description,
-        rightperson: req.body.rightperson,
-        votes: 0,
-        finalist: 0,
-        selected: 0
-      });
+        // Create submissionmodel in database
+        var submission = new submissionmodel({
+          name: req.body.name,
+          submission_id: new_id,
+          email: req.body.email,
+          title: req.body.title,
+          status: req.body.status,
+          video_link: req.body.video_link,
+          description: req.body.description,
+          rightperson: req.body.rightperson,
+          votes: 0,
+          finalist: 0,
+          selected: 0
+        });
 
-      submission.save(function(err){
-        if(err){
-          console.log('Application not submitted \n');
-          console.log('Applicant: ' + req.body.name);
-          console.log('Video link: ' + req.body.video_link);
-          console.log('New ID: ' + new_id);
-          res.redirect('/apply/failure');
-        }else{
-          console.log('Application submitted successfully \n')
-          console.log('Applicant: ' + req.body.name);
-          console.log('Video link: ' + req.body.video_link);
-          res.redirect('apply/success');
-        }
-      });
+        submission.save(function(err){
+          if(err){
+            console.log('Application not submitted \n');
+            console.log('Applicant: ' + req.body.name);
+            console.log('Video link: ' + req.body.video_link);
+            console.log('New ID: ' + new_id);
+            res.redirect('/apply/failure');
+          }else{
+            console.log('Application submitted successfully \n')
+            console.log('Applicant: ' + req.body.name);
+            console.log('Video link: ' + req.body.video_link);
+            res.redirect('apply/success');
+          }
+        });
+      };
     });
   });
 
