@@ -39,9 +39,9 @@ module.exports = function(app, mongoose, submissionmodel) {
 
 
   // APPLICATION PAGE
-  // app.get('/apply', function(req, res) {
-  //   res.render('apply', { });
-  // });
+  app.get('/apply', function(req, res) {
+    res.render('apply', { });
+  });
   // app.post('/apply', function(req,res) {
   //   // GET ID
   //   // if no applications already, make id 1
