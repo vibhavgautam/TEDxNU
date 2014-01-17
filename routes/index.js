@@ -39,78 +39,78 @@ module.exports = function(app, mongoose, submissionmodel) {
 
 
   // APPLICATION PAGE
-  app.get('/apply', function(req, res) {
-    res.render('apply', { });
-  });
-  app.post('/apply', function(req,res) {
-    // GET ID
-    // if no applications already, make id 1
-    // otherwise highest existing id + 1
-    submissionmodel.findOne().sort('-submission_id').select('submission_id').exec(function(err, results){
-      console.log("QUERY RESULTS:");
-      console.log(results);
+  // app.get('/apply', function(req, res) {
+  //   res.render('apply', { });
+  // });
+  // app.post('/apply', function(req,res) {
+  //   // GET ID
+  //   // if no applications already, make id 1
+  //   // otherwise highest existing id + 1
+  //   submissionmodel.findOne().sort('-submission_id').select('submission_id').exec(function(err, results){
+  //     console.log("QUERY RESULTS:");
+  //     console.log(results);
 
-      if(err){
-        console.log('ERROR:')
-        console.log(err);
-      }else{
+  //     if(err){
+  //       console.log('ERROR:')
+  //       console.log(err);
+  //     }else{
 
-        if(results==null){
-          new_id = 1;
-        } else {
-          new_id = results.submission_id+1;
-        };
-      };
-      console.log('NEW ID:');
-      console.log(new_id);
-      if(req.body.name == "" ||
-        req.body.email == "" ||
-        req.body.video_link == "" ||
-        req.body.description == "" ||
-        req.body.rightperson == ""){
-        res.redirect('/apply/failure');
-      }else {
+  //       if(results==null){
+  //         new_id = 1;
+  //       } else {
+  //         new_id = results.submission_id+1;
+  //       };
+  //     };
+  //     console.log('NEW ID:');
+  //     console.log(new_id);
+  //     if(req.body.name == "" ||
+  //       req.body.email == "" ||
+  //       req.body.video_link == "" ||
+  //       req.body.description == "" ||
+  //       req.body.rightperson == ""){
+  //       res.redirect('/apply/failure');
+  //     }else {
 
-        // Create submissionmodel in database
-        var submission = new submissionmodel({
-          name: req.body.name,
-          submission_id: new_id,
-          email: req.body.email,
-          title: req.body.title,
-          status: req.body.status,
-          video_link: req.body.video_link,
-          description: req.body.description,
-          rightperson: req.body.rightperson,
-          votes: 0,
-          finalist: 0,
-          selected: 0
-        });
+  //       // Create submissionmodel in database
+  //       var submission = new submissionmodel({
+  //         name: req.body.name,
+  //         submission_id: new_id,
+  //         email: req.body.email,
+  //         title: req.body.title,
+  //         status: req.body.status,
+  //         video_link: req.body.video_link,
+  //         description: req.body.description,
+  //         rightperson: req.body.rightperson,
+  //         votes: 0,
+  //         finalist: 0,
+  //         selected: 0
+  //       });
 
-        submission.save(function(err){
-          if(err){
-            console.log('Application not submitted \n');
-            console.log('Applicant: ' + req.body.name);
-            console.log('Video link: ' + req.body.video_link);
-            console.log('New ID: ' + new_id);
-            res.redirect('/apply/failure');
-          }else{
-            console.log('Application submitted successfully \n')
-            console.log('Applicant: ' + req.body.name);
-            console.log('Video link: ' + req.body.video_link);
-            res.redirect('apply/success');
-          }
-        });
-      };
-    });
-  });
+  //       submission.save(function(err){
+  //         if(err){
+  //           console.log('Application not submitted \n');
+  //           console.log('Applicant: ' + req.body.name);
+  //           console.log('Video link: ' + req.body.video_link);
+  //           console.log('New ID: ' + new_id);
+  //           res.redirect('/apply/failure');
+  //         }else{
+  //           console.log('Application submitted successfully \n')
+  //           console.log('Applicant: ' + req.body.name);
+  //           console.log('Video link: ' + req.body.video_link);
+  //           res.redirect('apply/success');
+  //         }
+  //       });
+  //     };
+  //   });
+  // });
 
   // APPLY SUCCESS AND FAILURE PAGES
-  app.get('/apply/success', function(req, res) {
-    res.render('applysuccess', { });
-  });
-  app.get('/apply/failure', function(req, res) {
-    res.render('applyfailure', { });
-  });
+  // app.get('/apply/success', function(req, res) {
+  //   res.render('applysuccess', { });
+  // });
+  // app.get('/apply/failure', function(req, res) {
+  //   res.render('applyfailure', { });
+  // });
 
   // VIEW SUBMISSIONS PAGE
   app.get('/viewapps', function(req, res) {
