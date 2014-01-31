@@ -189,6 +189,10 @@ module.exports = function(app, mongoose, submissionmodel) {
   });
 
 
+  app.get('/about', function(req, res){
+    res.render('about', { });
+  });
+
 }
 
 

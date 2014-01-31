@@ -3,9 +3,8 @@ html
   head
     title TEDx NorthwesternU 2014
     link(rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css")
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     link(rel='stylesheet', href='../stylesheets/style.css')
-  body(style="background-color: rgb(240,240,240);")
+  body
 
     //- NAV BAR
     div(class="navbar navbar-fixed-top")
@@ -18,9 +17,14 @@ html
           //- a(class="brand") TED x Northwestern U
           //- img(class="brand" style="height:25px;" src="../images/tedxnu-brand.png")
           div(class="nav-collapse collapse")
+            ul(class="nav")
+              li
+                a(href="#") Home
             ul(class="nav pull-right")
               li
-                div: a(class="btn btn-danger navbar-btn" href="/apply") Apply
+                a(href="#about") About
+              li
+                a(href="#speakers") Speakers
 
     div(id="fakerow")
   
@@ -31,4 +35,5 @@ html
     
     script(type='text/javascript' src='../javascripts/jquery.js')
     script(type='text/javascript' src='../javascripts/bootstrap.js')
+    script(type='text/javascript' src='../javascripts/holder.js')
     block content
