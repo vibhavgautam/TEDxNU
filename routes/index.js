@@ -193,6 +193,10 @@ module.exports = function(app, mongoose, submissionmodel) {
     res.render('about', { });
   });
 
+  app.get('/faq', function(req, res){
+    res.render('faq', { });
+  });
+
 }
 
 
