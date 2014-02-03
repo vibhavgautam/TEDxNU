@@ -96,3 +96,7 @@
     border: 0 none;
     box-shadow: none;
 }
+
+.thumbnail > img {
+  width:80%;
+}
