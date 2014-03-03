@@ -33,8 +33,8 @@ module.exports = function(app, mongoose, submissionmodel) {
   app.get('/speakers', function(req, res){
     res.render('speakers', {});
   })
-  app.get('/speakersnew', function(req, res){
-    res.render('speakersnew', {});
+  app.get('/speakersold', function(req, res){
+    res.render('speakersold', {});
   })
 
   // Attend/Tickets page

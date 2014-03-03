@@ -1,142 +1,403 @@
 extends layout
 
 block content
-
   div(class="container")
       h1(id="header_name") Our Speakers
 
-  //- SPEAKER SECTION
-  div(class="row homepage-section" id="speakers")
+
+  //- div(class="row")
+  //-   div(class="container")
+  //-     div(class="row")
+  //-       div(class="span4 offset4")
+  //-         button(class="btn") Session One
+  //-         button(class="btn") Session Two
+  //-         button(class="btn") Session Three
+
+  //- ***********
+  //- SESSION ONE
+  //- ***********
+  div(id="session_one" class="row homepage-section")
+    div(class="container")
+      div(class="row")
+        //- HEADER
+        div(class="span2 navver")
+          ul(class="nav nav-pills nav-stacked")
+            li(id="session_one_pill")
+              a(href="#session_one") Session One (9 AM)
+            li
+              a(href="#session_two") Session Two (12 PM)
+            li
+              a(href="#session_three") Session Three (3 PM)
+
+        div(class="span10 session-row" id="#session_one")
+          h1 Session One
+            p(class="lead") (9 AM)
+      br
+      
+
+      //- Eli Finkel
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/eli-finkel.jpg" alt="...")
+
+        div(class="span4")
+          h3 What Would a Successful Mathmaking Algorithm Look Like?
+          p
+            strong Eli Finkel
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/eli-finkel") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") Over the past few years, new technological developments and new insights into human psychology are converging in a way that will revolutionize matchmaking. Eli Finkel's talk offers a glimpse into a romantic future that is, as of 2014, finally within our grasp.
+      
+
+      //- Parag Gupta
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/parag-gupta.jpg" alt="...")
+
+        div(class="span4")
+          h3 So, um... 12 Years, huh?
+          p
+            strong Parag Gupta
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/parag-gupta") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") Parag Gupta has been a Ph.D student at Northwestern for a long time — 12 years to be precise. He talks about how people make this university what is is and uphold what the true purpose of a university's mission should be.
+
+
+      //- Jackson Walker
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/jackson-walker.jpg" alt="...")
+
+        div(class="span4")
+          h3 Finding Your Long Lost Twin
+          p
+            strong Jackson Walker
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/jackson-walker") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") Jackson’s talk is about the value of discovering your past, even though it may be difficult. It was this discovery process that led him back to India, the place of his birth, where an incredible two weeks brought clarity to his future plans
+
+
+      //- Marissa Jackson
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/marissa-jackson.jpg" alt="...")
+
+        div(class="span4")
+          h3 Human Rights, Sankofa and the Power of Paradigms
+          p
+            strong Marissa Jackson
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/marissa-jackson") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") Sankofa means "go back and get it." The core message of Marissa Jacksons’s talk is the importance of paradigms to political movements. Her talk hopes to challenge people to imagine what law and politics would look like in the United States, and worldwide, if we reached back to get our human rights.
+
+
+
+
+
+  //- ***********
+  //- SESSION TWO
+  //- ***********
+  div(id="session_two" class="row homepage-section")
+    div(class="container")
+      div(class="row")
+        //- HEADER
+        div(class="span10 offset2 session-row" id="#session_two")
+          h1 Session Two
+            p(class="lead") (12 PM)
+      br
+      
+
+      //- Shane Larson
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/shane-larson.jpg" alt="...")
+
+        div(class="span4")
+          h3 Pluto's Day of Reckoning
+          p
+            strong Shane Larson
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/shane-larson") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") We will revisit the story of Pluto's discovery, explore why the classification of Pluto changed, and why we care! The story is not over yet. The discovery of other worlds around other stars is once again pushing our understanding of the Cosmos
+
+      //- Aysha Chowdhry
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/aysha-chowdhry.jpg" alt="...")
+
+        div(class="span4")
+          h3 Educating the Future
+          p
+            strong Aysha Chowdhry
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/aysha-chowdhry") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") The education system in Pakistan, the world’s sixth largest country, is broken.  25 million children are out-of-school. We will examine a particularly interesting example of civil society taking matters into its own hands.
+
+
+      //- Linda Van Horn
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/linda-van-horn.jpg" alt="...")
+
+        div(class="span4")
+          h3 The Antidote to Obesity is Spelled M-O-M
+          p
+            strong Linda Van Horn
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/linda-van-horn") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") Obesity is a pervasive public health problem that is better prevented than treated. Evidence has clearly documented that overweight and obese moms are at risk of having bigger babies. How can this situation be changed and where do we start?
+
+
+      //- Michael Silberblatt
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/michael-silberblatt.jpg" alt="...")
+
+        div(class="span4")
+          h3 Why Little Red Riding Hood Was Wrong
+          p
+            strong Michael Silberblatt
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/michael-silberblatt") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") This talk challenges the popular fairy tale's conventional wisdom telling us to follow the paths in life that are seemingly paved before us, and instead asks us to examine how they spend their own time, and empowers them to live life "on the road less traveled".
+
+
+
+
+
+  //- ***********
+  //- SESSION Three
+  //- ***********
+  div(id="session_three" class="row homepage-section")
+    div(class="container")
+      div(class="row")
+        //- HEADER
+        div(class="span10 offset2 session-row" id="#session_two")
+          h1 Session Three
+            p(class="lead") (3 PM)
+      br
+      
+
+      //- Neha Reddy
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/neha-reddy.png" alt="...")
+
+        div(class="span4")
+          h3 Culture and Human Rights: Narratives of Ethiopian Identity
+          p
+            strong Neha Reddy
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/neha-reddy") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") This talk will discuss the hidden opportunities for forward progression that culture and human rights pose if we think of them in a new light, capitalizing on the capabilities rather than focusing solely on the differences.
+
+      //- Xavier McElrath-Bey
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/xavier-mcelrath-bey.jpg" alt="...")
+
+        div(class="span4")
+          h3 No Child is Born Evil
+          p
+            strong Xavier McElrath-Bey
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/xavier-mcelrath-bey") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") We will explore the important need for at-risk youth to “cross paths” with positive people and processes in order to deter them from deviant and destructive lifestyles; just as negative influences and unfair processes can potentially reinforce negative behaviors.
+
+
+      //- Zack Johnson
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/zack-johnson.jpg" alt="...")
+
+        div(class="span4")
+          h3 Relationship Analytics are Changing the Way We Manage Businesses
+          p
+            strong Zack Johnson
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/zack-johnson") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") Everyone knows about how social networks have forever changed our personal lives, but are we ready for the paradigm shift they are bringing to the business world? In his talk, Zack will demonstrate how managers will be able to make the intangible aspects of business management tangible, and in doing so run better, more agile organizations
+
+
+      //- Stephen Dowling
+      div(class="row speaker-row")
+        div(class="span2 offset2")
+          img(class="speaker_pic" src="../images/speaker-pics/stephen-dowling.jpg" alt="...")
+
+        div(class="span4")
+          h3 Teachers: Let's Cross Paths More Often
+          p
+            strong Stephen Dowling
+          button(class="btn speaker-btn")
+            a(class="homepage-section-btn" href="speaker/stephen-dowling") Learn more about this talk and speaker
+        div(class="span4")
+          p(class="lead") We access, accumulate, and experience knowledge in fundamentally different ways than in the 20th century. In his talk, Stephen Dowling advocates that these changes should prompt a discussion about how teachers design curricula and plan instruction.
     
 
 
 
-    div(class="container")
 
-      //- ALUMNI
 
-      div(class="row")
-        center
-          h3 Alumni
-      div(class="row speaker-row")
-        div(class="span3")
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/marissa-jackson.png" alt="...")
-              div(class="caption")
-                h3(class="talk-title") Human Rights, Sankofa and the Power of Paradigms
-                p
-                  strong Marissa Jackson
-                p "I would like to talk about the Ashanti principle of Sankofa, meaning 'reach back and get it,' in relation to the American abandonment of the human rights movement in favor of civil rights in the 1950s. I will challenge the Northwestern community to consider abandoning the civil rights framework in order to reach back and get the human rights framework."
-        div(class="span3")
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/zack-johnson.jpg" alt="..." style="width:75%")
-              div(class="caption")
-                h3(class="talk-title") Relationship Analytics are Changing the Way We Manage Businesses
-                p
-                  strong Zachary Johnson
-                p "Increases in data available, machine learning capabilities, and business need are forcing organizations to incorporate bleeding edge analytics and blend them with existing methods."
-        div(class="span3")  
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/aysha-chowdhry.jpg" alt="..." style="width:75%")
-              div(class="caption")
-                h3(class="talk-title") Educating the Future
-                p
-                  strong Aysha Chowdhry
-                p "In Pakistan, many people are trapped in a cycle of poverty so often times educating children is not a priority. In any nation, education contributes to prosperity — expanding opportunities and improving standards of living."
-        div(class="span3")  
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/stephen-dowling.jpg" alt="..." style="width:100%")
-              div(class="caption")
-                h3(class="talk-title") Schools Should Let Paths Cross More Often
-                p
-                  strong Stephen Dowling
-                p "While 20th century models of education treated subjects as separate bodies of knowledge, 21st century ways of learning fare better when disciplines are allowed to cross paths with each other in substantial, meaningful ways."
 
-      //- FACULTY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //- div(class="container")  
+
+    //-   //- ALUMNI
+
+    //-   div(class="row")
+    //-     center
+    //-       h3 Alumni
+    //-   div(class="row speaker-row")
+    //-     div(class="span3")
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/marissa-jackson.png" alt="...")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Human Rights, Sankofa and the Power of Paradigms
+    //-             p
+    //-               strong Marissa Jackson
+    //-             p "I would like to talk about the Ashanti principle of Sankofa, meaning 'reach back and get it,' in relation to the American abandonment of the human rights movement in favor of civil rights in the 1950s. I will challenge the Northwestern community to consider abandoning the civil rights framework in order to reach back and get the human rights framework."
+    //-     div(class="span3")
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/zack-johnson.jpg" alt="..." style="width:75%")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Relationship Analytics are Changing the Way We Manage Businesses
+    //-             p
+    //-               strong Zachary Johnson
+    //-             p "Increases in data available, machine learning capabilities, and business need are forcing organizations to incorporate bleeding edge analytics and blend them with existing methods."
+    //-     div(class="span3")  
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/aysha-chowdhry.jpg" alt="..." style="width:75%")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Educating the Future
+    //-             p
+    //-               strong Aysha Chowdhry
+    //-             p "In Pakistan, many people are trapped in a cycle of poverty so often times educating children is not a priority. In any nation, education contributes to prosperity — expanding opportunities and improving standards of living."
+    //-     div(class="span3")  
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/stephen-dowling.jpg" alt="..." style="width:100%")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Schools Should Let Paths Cross More Often
+    //-             p
+    //-               strong Stephen Dowling
+    //-             p "While 20th century models of education treated subjects as separate bodies of knowledge, 21st century ways of learning fare better when disciplines are allowed to cross paths with each other in substantial, meaningful ways."
+
+    //-   //- FACULTY
       
-      div(class="row")
-        center
-          h3 Faculty
-      div(class="row speaker-row")
-        div(class="span3")
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/shane-larson.jpg" alt="...")
-              div(class="caption")
-                h3(class="talk-title") Pluto's Day of Reckoning
-                p
-                  strong Shane Larson
-                p "Sometimes events in science capture the public's attention, providing an opportunity to talk about why science works and why it is important in our everyday lives. The demotion of Pluto as a planet struck a chord with people around the world; people felt personally invested in a bit of science knowledge they had owned since elementary school."
-        div(class="span3")
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/linda-van-horn.jpg" alt="...")
-              div(class="caption")
-                h3(class="talk-title") The Antidote to Obesity is Spelled M-O-M
-                p
-                  strong Linda Van Horn
-                p "We need an interdisciplinary approach, not only between doctors and dietitians but moms themselves. The obesity problem can disappear in 2-3 generations if women, especially mothers, would take charge!"
-        div(class="span3")  
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/eli-finkel.jpg" alt="...")
-              div(class="caption")
-                h3(class="talk-title") Technology, Crossing Paths and Romantic Compatibility
-                p
-                  strong Eli Finkel
-                p "Matchmaking sites like eHarmony pitch themselves as an algorithmic leap beyond crossing paths, one that practically assures romantic compatibility. Unfortunately, the 'scientific' methods employed these sites are fundamentally flawed. But scientific and technological innovations are converging, opening the door to a completely new approach to matchmaking algorithms."
-        div(class="span3")  
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/xavier-mcelrath-bey.JPG" style="width:100%")
-              div(class="caption")
-                h3(class="talk-title") No Child is Born Bad
-                p
-                  strong Xavier McElrath-Bey
-                p "It is my hope to share the important need for at-risk youth to cross paths with positive people and processes in order effectively deter them deviant and destructive lifestyles; just as negative influences and unfair processes can potentially reinforce negative behavior."
+    //-   div(class="row")
+    //-     center
+    //-       h3 Faculty
+    //-   div(class="row speaker-row")
+    //-     div(class="span3")
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/shane-larson.jpg" alt="...")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Pluto's Day of Reckoning
+    //-             p
+    //-               strong Shane Larson
+    //-             p "Sometimes events in science capture the public's attention, providing an opportunity to talk about why science works and why it is important in our everyday lives. The demotion of Pluto as a planet struck a chord with people around the world; people felt personally invested in a bit of science knowledge they had owned since elementary school."
+    //-     div(class="span3")
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/linda-van-horn.jpg" alt="...")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") The Antidote to Obesity is Spelled M-O-M
+    //-             p
+    //-               strong Linda Van Horn
+    //-             p "We need an interdisciplinary approach, not only between doctors and dietitians but moms themselves. The obesity problem can disappear in 2-3 generations if women, especially mothers, would take charge!"
+    //-     div(class="span3")  
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/eli-finkel.jpg" alt="...")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Technology, Crossing Paths and Romantic Compatibility
+    //-             p
+    //-               strong Eli Finkel
+    //-             p "Matchmaking sites like eHarmony pitch themselves as an algorithmic leap beyond crossing paths, one that practically assures romantic compatibility. Unfortunately, the 'scientific' methods employed these sites are fundamentally flawed. But scientific and technological innovations are converging, opening the door to a completely new approach to matchmaking algorithms."
+    //-     div(class="span3")  
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/xavier-mcelrath-bey.JPG" style="width:100%")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") No Child is Born Bad
+    //-             p
+    //-               strong Xavier McElrath-Bey
+    //-             p "It is my hope to share the important need for at-risk youth to cross paths with positive people and processes in order effectively deter them deviant and destructive lifestyles; just as negative influences and unfair processes can potentially reinforce negative behavior."
 
-      //- STUDENTS
-      div(class="row")
-        center
-          h3 Students
-      div(class="row speaker-row")
-        div(class="span3")
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/michael-silberblatt.jpg" alt="...")
-              div(class="caption")
-                h3(class="talk-title") Why Little Red Riding Hood is Wrong
-                p
-                  strong Michael Silberblatt
-                p "Our lives seem to be governed by the 'stay the familiar path' mentality found in everyone’s favorite fairy tale: Little Red Riding Hood. But we experience our greatest personal growth when our paths cross into the unknown and unfamiliar. Perhaps the ‘wolves in the woods’ are merely self-imposed mental hurdles that keep us from discovering our true potential."
-        div(class="span3")
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/parag-gupta.jpg" alt="..." style="width:900%")
-              div(class="caption")
-                h3(class="talk-title") So, Um... 12 Years, Huh?
-                p
-                  strong Parag Gupta
-                p "This is a talk about people and how our people make this university what it is and uphold what the true purpose of a university’s mission should be. I've been here for 12 years as a student; but when I leave to begin my appointment at Harvard, I will depart with my head held high and the biggest smile on my face knowing that all I've been able to acquire here is the result of the people with whom I’ve crossed paths."
-        div(class="span3")  
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/jackson-walker.jpg" alt="..." style:)
-              div(class="caption")
-                h3(class="talk-title") Finding Your Long Lost Twin
-                p
-                  strong Jackson Walker
-                p "I had the opportunity to return to India last winter, eighteen years after being adopted by my American parents. There I crossed paths with my past for the first time and what I learned will shape my future."
-        div(class="span3")  
-          div(class="col-sm-6 col-md-4")
-            div(class="thumbnail")
-              img(src="../images/speaker-pics/neha-reddy.png" alt="...")
-              div(class="caption")
-                h3(class="talk-title") Culture and Human Rights: Narratives of Ethiopian Identity
-                p
-                  strong Neha Reddy
-                p "Culture is often considered in conflict with human rights, evidenced by traditional practices in parts of the world that are deemed harmful and degrading, largely to women and children. My talk will discuss the hidden compatibilities and opportunities for forward progression that culture and human rights pose if we think of them in a new light."
+    //-   //- STUDENTS
+    //-   div(class="row")
+    //-     center
+    //-       h3 Students
+    //-   div(class="row speaker-row")
+    //-     div(class="span3")
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/michael-silberblatt.jpg" alt="...")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Why Little Red Riding Hood is Wrong
+    //-             p
+    //-               strong Michael Silberblatt
+    //-             p "Our lives seem to be governed by the 'stay the familiar path' mentality found in everyone’s favorite fairy tale: Little Red Riding Hood. But we experience our greatest personal growth when our paths cross into the unknown and unfamiliar. Perhaps the ‘wolves in the woods’ are merely self-imposed mental hurdles that keep us from discovering our true potential."
+    //-     div(class="span3")
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/parag-gupta.jpg" alt="..." style="width:900%")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") So, Um... 12 Years, Huh?
+    //-             p
+    //-               strong Parag Gupta
+    //-             p "This is a talk about people and how our people make this university what it is and uphold what the true purpose of a university’s mission should be. I've been here for 12 years as a student; but when I leave to begin my appointment at Harvard, I will depart with my head held high and the biggest smile on my face knowing that all I've been able to acquire here is the result of the people with whom I’ve crossed paths."
+    //-     div(class="span3")  
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/jackson-walker.jpg" alt="..." style:)
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Finding Your Long Lost Twin
+    //-             p
+    //-               strong Jackson Walker
+    //-             p "I had the opportunity to return to India last winter, eighteen years after being adopted by my American parents. There I crossed paths with my past for the first time and what I learned will shape my future."
+    //-     div(class="span3")  
+    //-       div(class="col-sm-6 col-md-4")
+    //-         div(class="thumbnail")
+    //-           img(src="../images/speaker-pics/neha-reddy.png" alt="...")
+    //-           div(class="caption")
+    //-             h3(class="talk-title") Culture and Human Rights: Narratives of Ethiopian Identity
+    //-             p
+    //-               strong Neha Reddy
+    //-             p "Culture is often considered in conflict with human rights, evidenced by traditional practices in parts of the world that are deemed harmful and degrading, largely to women and children. My talk will discuss the hidden compatibilities and opportunities for forward progression that culture and human rights pose if we think of them in a new light."

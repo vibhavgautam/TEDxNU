@@ -20,6 +20,10 @@
     font-size: 50px;
   }
 
+  .nav-pills {
+    display: none;
+  }
+
 }
 @media only screen and (min-width:480px){
   
@@ -29,6 +33,11 @@
   #header_name{
     margin-top: -60px;
     color: #fff;
+  }
+
+  .nav-pills {
+    display: inline;
+    position: fixed;
   }
   
 }
@@ -90,12 +99,12 @@
   border-color: rgb(95,68,155) !important;
 }
 
-.nav > li > a {
+.pull-right > li > a {
   color: rgb(95,68,155) !important;
   font-weight: bold;
 }
 
-.nav > li > a:hover {
+.pull-right > li > a:hover {
   color: rgb(255,43,6) !important;
 }
 
@@ -162,7 +171,7 @@ a.homepage-section-btn {
 }
 
 .speaker_pic {
-  width: 80%;
+  width: 90%;
   height: auto;
 
 }
@@ -172,8 +181,29 @@ a.homepage-section-btn {
   padding-bottom: 20px;
 }
 
+.nav-pills > li > a {
+  color: rgb(95,68,155) !important;
+  font-weight: bold;
+  text-align: right;
+}
+
+.nav-pills > li > a:hover {
+  color: rgb(255,43,6) !important;
+}
+
+.nav-pills > li:hover {
+  background-color: none !important;
+}
+
+.nav-pills {
+  margin-right: 30px;
+}
 
 
+/* HIDDEN UNTIL I MAKE INDIVIDUAL SPEAKER PAGES */
+.speaker-btn {
+  display: none;
+}
 
 
 
