@@ -39,3 +39,6 @@ function drawpath( canvas, pathstr, duration, attr, callback )
   }, interval_length );  
   return result;
 }
+
+
+

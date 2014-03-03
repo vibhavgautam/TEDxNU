@@ -24,8 +24,30 @@ module.exports = function(app, mongoose, submissionmodel) {
 
 
 
+  // About page
+  app.get('/about', function(req, res){
+    res.render('about', {});
+  })
 
+  // Speakers page
+  app.get('/speakers', function(req, res){
+    res.render('speakers', {});
+  })
+  app.get('/speakersnew', function(req, res){
+    res.render('speakersnew', {});
+  })
 
+  // Attend/Tickets page
+  app.get('/attend', function(req, res){
+    res.render('attend', {});
+  })
+  app.get('/tickets', function(req, res){
+    res.redirect('/attend');
+  })
+
+  app.get('/faq', function(req, res){
+    res.render('faq', { });
+  });
 
 
 
@@ -189,13 +211,7 @@ module.exports = function(app, mongoose, submissionmodel) {
   });
 
 
-  app.get('/about', function(req, res){
-    res.render('about', { });
-  });
-
-  app.get('/faq', function(req, res){
-    res.render('faq', { });
-  });
+  
 
 }
 

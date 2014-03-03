@@ -15,19 +15,23 @@ html
             span(class="icon-bar")
             span(class="icon-bar")
           //- a(class="brand") TED x Northwestern U
-          img(class="brand" style="height:25px;" src="../images/tedxnu-brand.png")
+          a(href="/")
+            img(id="logo-brand" class="brand" style="height:25px;" src="../images/tedxnuflat.jpg")
           div(class="nav-collapse collapse")
             ul(class="nav")
               
             ul(class="nav pull-right")
               li
-                a(href="http://www.tedxnorthwesternu.com/#about") About
+                a(href="/about") About
               li
-                a(href="http://www.tedxnorthwesternu.com/#speakers") Speakers
+                a(href="/speakers") Speakers
               li
-                a(href="http://www.tedxnorthwesternu.com/faq")
+                a(href="/attend") Attend
+              
 
-    div(id="fakerow")
+
+    img(src="../images/shuffle_purple_flat.jpg" style="width:100%")
+    
   
 
 
@@ -37,4 +41,34 @@ html
     script(type='text/javascript' src='../javascripts/jquery.js')
     script(type='text/javascript' src='../javascripts/bootstrap.js')
     script(type='text/javascript' src='../javascripts/holder.js')
+    script(type='text/javascript' src='../javascripts/homescreen.js')
     block content
+
+
+    //- FOOTER
+    div(class="row homepage-section" id="footer")
+      div(class="container")
+        div(class="row")
+          div(class="span6 offset2" id="footer-what-is")
+            h2 What is TED?
+            p In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event.
+            p This independent TEDx event is operated under license from TED.
+            button(class="btn")
+              a(href="/about" style="color:rgb(95,68,155)") Learn more about TEDxNorthwesternU
+          div(class="span2" id="footer-social")
+            h2
+            a(href="https://www.facebook.com/TEDxNorthwesternU")
+              img(src="../images/facebook_icon.png")
+            br
+            br
+            br
+            a(href="https://twitter.com/tedxnu")
+              img(src="../images/twitter_icon.png")
+
+
+
+
+
+
+
+
