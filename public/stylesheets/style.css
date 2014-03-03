@@ -148,6 +148,11 @@ a.homepage-section-btn {
 
 }
 
+.ad-picture {
+  width: 50%;
+  height: auto;
+}
+
 /*TICKETS PAGE*/
 
 #prices_table {
@@ -173,8 +178,8 @@ a.homepage-section-btn {
 }
 
 .speaker-row {
-  padding-top:20px;
-  padding-bottom: 20px;
+  padding-top:30px;
+  padding-bottom: 30px;
 }
 
 .nav-pills > li > a {
