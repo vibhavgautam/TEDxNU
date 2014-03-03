@@ -60,11 +60,6 @@
   padding-bottom: 20px;
 }
 
-.speaker-row {
-  padding-top:30px;
-  padding-bottom: 30px;
-}
-
 .talk-title {
   line-height: 30px;
   font-family: "Helvetica Neue Light", "Helvetica Neue", sans-serif;
@@ -158,3 +153,27 @@ a.homepage-section-btn {
 .indent {
   margin-left: 50px;
 }
+
+/* SPEAKERS PAGE */
+
+.session-row {
+  border-bottom: solid 2px rgb(95, 68, 155);
+  text-align: center;
+}
+
+.speaker_pic {
+  width: 80%;
+  height: auto;
+
+}
+
+.speaker-row {
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+
+
+
+
+
