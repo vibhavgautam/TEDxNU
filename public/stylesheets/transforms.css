@@ -1,0 +1,27 @@
+
+
+#video_left {
+  width: 90%;
+/*  transform: rotateZ(5deg);
+  -webkit-transform: rotate3d(3deg,0,5deg,4);*/
+}
+
+#video_middle {
+  width:100%;
+}
+
+#video_right {
+  width: 90%;
+/*  transform: skew(4.50deg,-4.50deg);
+  -webkit-transform: skew(4.50deg,-4.50deg);*/
+}
+
+/*#theme-logo {
+  -webkit-transform: rotateY(80deg);
+}*/
+
+#intro_text {
+  -webkit-transform: rotateY(-10deg);
+  -webkit-transform: skew(-4deg);
+  background-color: #ddd;
+}
