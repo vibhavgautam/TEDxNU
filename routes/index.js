@@ -35,23 +35,23 @@ module.exports = function(app, mongoose, submissionmodel) {
   });
 
   // Individual speaker pages
-  app.get('/speaker/:name', function(req, res){
-    // Function to capitalize string.
-    String.prototype.capitalize = function() {
-      return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
-    };
+  // app.get('/speaker/:name', function(req, res){
+  //   // Function to capitalize string.
+  //   String.prototype.capitalize = function() {
+  //     return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+  //   };
 
-    var speaker_name = req.params.name;
-    speaker_name = speaker_name.split('-');
-    if(speaker_name.length != 2){
-      res.render('404', {});
-    }
-    speaker_name = speaker_name[0] + " " + speaker_name[1];
-    speaker_name = speaker_name.capitalize();
-    console.log(speaker_name);
+  //   var speaker_name = req.params.name;
+  //   speaker_name = speaker_name.split('-');
+  //   if(speaker_name.length != 2){
+  //     res.render('404', {});
+  //   }
+  //   speaker_name = speaker_name[0] + " " + speaker_name[1];
+  //   speaker_name = speaker_name.capitalize();
+  //   console.log(speaker_name);
 
-    res.render('individual_speaker', {speaker : speaker_name});
-  });
+  //   res.render('individual_speaker', {speaker : speaker_name});
+  // });
 
   // Attend/Tickets page
   app.get('/attend', function(req, res){
