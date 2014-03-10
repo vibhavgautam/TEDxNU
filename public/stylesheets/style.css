@@ -164,6 +164,16 @@ a.homepage-section-btn {
   text-align: center !important;
 }
 
+#ticket-btn{
+  background-color: rgb(95,68,155) !important;
+  background-image: none !important;
+}
+
+#ticket-btn > a {
+  color: #fff;
+  text-shadow: none !important;
+}
+
 /* SPEAKERS PAGE */
 
 .session-row {
