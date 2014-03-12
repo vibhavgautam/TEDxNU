@@ -8,9 +8,6 @@
 
 module.exports = function(app, mongoose, submissionmodel) {
 
-
-
-
   // HOME SCREEN --- Show list of characters
   
   app.get('/', function(req, res) {
@@ -22,6 +19,10 @@ module.exports = function(app, mongoose, submissionmodel) {
 
   // TEAM PAGE
 
+  //Sponsors page
+  app.get('/sponsors', function(req, res){
+    res.render('sponsors', {});
+  });
 
 
   // About page
