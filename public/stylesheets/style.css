@@ -219,11 +219,12 @@ a.homepage-section-btn {
 
 /* SPONSORS PAGE */
 
-.sponsor-row {
+#sponsor-row {
   text-align: center;
+  margin-top: 40px;
 }
 .sponsor-img {
-  margin-top: 30px;
+  
   max-height: 350px;
   width: 60%;
   display: block;
@@ -232,7 +233,7 @@ a.homepage-section-btn {
 }
 
 #ey-sponsor {
-  height: 200px;
+  height: 300px;
   width: auto;
 }
 
@@ -241,5 +242,14 @@ a.homepage-section-btn {
   width: auto;
 }
 
+#alumtalks-sponsor {
+  height: 300px;
+  width: auto;
+}
+
+#nu-seal-sponsor {
+  height: 300px;
+  width: auto;
+}
 
 
