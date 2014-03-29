@@ -253,3 +253,16 @@ a.homepage-section-btn {
 }
 
 
+/* TEAM PAGE */
+
+.team-title-header {
+  text-align: center;
+}
+
+.team-profile {
+  text-align: center;
+}
+
+.team-position-row {
+  margin-top: 50px;
+}

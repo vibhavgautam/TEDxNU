@@ -18,11 +18,15 @@ module.exports = function(app, mongoose, submissionmodel) {
 
 
   // TEAM PAGE
+  app.get('/team', function(req, res){
+    res.render('team', {});
+  });
 
   //Sponsors page
   app.get('/sponsors', function(req, res){
     res.render('sponsors', {});
   });
+
 
 
   // About page
