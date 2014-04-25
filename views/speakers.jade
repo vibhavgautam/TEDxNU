@@ -2,7 +2,7 @@ extends layout
 
 block content
   div(class="container")
-      h1(id="header_name") Our Speakers
+    h1(id="header_name") Our Speakers
 
 
 
@@ -13,16 +13,16 @@ block content
     div(class="container")
       div(class="row")
         //- HEADER
-        div(class="span2 navver")
-          ul(class="nav nav-pills nav-stacked")
-            li(id="session_one_pill")
-              a(href="#session_one") Session One (9 AM)
-            li
-              a(href="#session_two") Session Two (12 PM)
-            li
-              a(href="#session_three") Session Three (3 PM)
+        //- div(class="span2 navver")
+        //-   ul(class="nav nav-pills nav-stacked" id="session-picker")
+        //-     li(id="session_one_pill")
+        //-       a(href="#session_one" id="session-picker") Session One (9 AM)
+        //-     li
+        //-       a(href="#session_two") Session Two (12 PM)
+        //-     li
+        //-       a(href="#session_three") Session Three (3 PM)
 
-        div(class="span10 session-row" id="#session_one")
+        div(class="span10 offset1 session-row" id="#session_one")
           h1 Session One
             p(class="lead") (9 AM - 11:30 AM)
       br
@@ -30,63 +30,63 @@ block content
 
       //- Eli Finkel
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/eli-finkel.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/eli-finkel.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 What Would a Successful Matchmaking Algorithm Look Like?
           p
             strong Eli Finkel
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/eli-finkel") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Over the past few years, new technological developments and new insights into human psychology are converging in a way that will revolutionize matchmaking. Eli Finkel's talk offers a glimpse into a romantic future that is, as of 2014, finally within our grasp.
-      
+          p Over the past few years, new technological developments and new insights into human psychology are converging in a way that will revolutionize matchmaking. Eli Finkel's talk offers a glimpse into a romantic future that is, as of 2014, finally within our grasp.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/YS3vBYRYOCw?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
       //- Parag Gupta
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/parag-gupta.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/parag-gupta.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 "So, Um... 12 Years, Huh?"
           p
             strong Parag Gupta
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/parag-gupta") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Parag Gupta has been a Ph.D. student at Northwestern for a long time — 12 years to be precise. He talks about how people make this university what it is and uphold what the true purpose of a university's mission should be.
-
+          p Parag Gupta has been a Ph.D. student at Northwestern for a long time — 12 years to be precise. He talks about how people make this university what it is and uphold what the true purpose of a university's mission should be.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/32QCk1fRpfY?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
+          
 
       //- Jackson Walker
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/jackson-walker.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/jackson-walker.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 Finding Your Long Lost Twin
           p
             strong Jackson Walker
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/jackson-walker") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Drawing from his personal experience, Jackson Walker’s talk is about the value of discovering your past, even though it may be difficult. It was this discovery process that led him back to India, the place of his birth, where an incredible two weeks brought clarity to his future plans.
-
+          p Drawing from his personal experience, Jackson Walker’s talk is about the value of discovering your past, even though it may be difficult. It was this discovery process that led him back to India, the place of his birth, where an incredible two weeks brought clarity to his future plans.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/gq0HpqfbuHU?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
+          
+          
 
       //- Marissa Jackson
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/marissa-jackson.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/marissa-jackson.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 Human Rights, Sankofa and the Power of Paradigms
           p
             strong Marissa Jackson
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/marissa-jackson") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Sankofa means "go back and get it." The core message of Marissa Jackson’s talk is the importance of paradigms to political movements. Her talk hopes to challenge people to imagine what law and politics would look like in the United States, and worldwide, if we reached back to get our human rights.
-
+          p Sankofa means "go back and get it." The core message of Marissa Jackson’s talk is the importance of paradigms to political movements. Her talk hopes to challenge people to imagine what law and politics would look like in the United States, and worldwide, if we reached back to get our human rights.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/-T-iY_GiCOA?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
+          
 
 
 
@@ -97,7 +97,7 @@ block content
     div(class="container")
       div(class="row")
         //- HEADER
-        div(class="span10 offset2 session-row" id="#session_two")
+        div(class="span10 offset1 session-row" id="#session_two")
           h1 Session Two
             p(class="lead") (12 PM - 2:30 PM)
       br
@@ -105,63 +105,63 @@ block content
 
       //- Shane Larson
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/shane-larson.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/shane-larson.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 Pluto's Day of Reckoning
           p
             strong Shane Larson
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/shane-larson") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") We will revisit the story of Pluto's discovery, explore why the classification of Pluto changed, and why we care! The story is not over yet. The discovery of other worlds around other stars is once again pushing our understanding of the Cosmos.
+          p We will revisit the story of Pluto's discovery, explore why the classification of Pluto changed, and why we care! The story is not over yet. The discovery of other worlds around other stars is once again pushing our understanding of the Cosmos.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/859KP3HNuto?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
+          
 
+          
       //- Aysha Chowdhry
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/aysha-chowdhry.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/aysha-chowdhry.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 Educating the Future
           p
             strong Aysha Chowdhry
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/aysha-chowdhry") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") The education system in Pakistan, the world’s sixth largest country, is broken. Twenty-five million children are out-of-school. We will examine a particularly interesting example of civil society taking matters into its own hands.
+          p The education system in Pakistan, the world’s sixth largest country, is broken. Twenty-five million children are out-of-school. We will examine a particularly interesting example of civil society taking matters into its own hands.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/LbBtK6DtOhQ?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
+          
 
       //- Linda Van Horn
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/linda-van-horn.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/linda-van-horn.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 The Antidote to Obesity is Spelled M-O-M
           p
             strong Linda Van Horn
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/linda-van-horn") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Obesity is a pervasive public health problem that is better prevented than treated. Evidence has clearly documented that overweight and obese moms are at risk of having bigger babies. How can this situation be changed and where do we start?
+          p Obesity is a pervasive public health problem that is better prevented than treated. Evidence has clearly documented that overweight and obese moms are at risk of having bigger babies. How can this situation be changed and where do we start?
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/5qlSFZMG4Wc?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
 
       //- Michael Silberblatt
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/michael-silberblatt.jpg" alt="...")
-
-        div(class="span4")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/michael-silberblatt.jpg" alt="...")
+        div(class="span4 offset1")
           h3 Why Little Red Riding Hood Was Wrong
           p
             strong Michael Silberblatt
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/michael-silberblatt") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Michael Silberblatt's talk challenges the popular fairy tale's conventional wisdom telling us to follow the paths in life that are seemingly paved before us. Instead he asks us to examine how we spend our time, and empowers us to live life "on the road less travelled.”
-
-
+          p Michael Silberblatt's talk challenges the popular fairy tale's conventional wisdom telling us to follow the paths in life that are seemingly paved before us. Instead he asks us to examine how we spend our time, and empowers us to live life "on the road less travelled.”
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/fDsLoyvyYwM?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
 
   //- ***********
@@ -171,7 +171,7 @@ block content
     div(class="container")
       div(class="row")
         //- HEADER
-        div(class="span10 offset2 session-row" id="#session_two")
+        div(class="span10 offset1 session-row" id="#session_two")
           h1 Session Three
             p(class="lead") (3 PM - 5 PM)
       br
@@ -179,62 +179,62 @@ block content
 
       //- Neha Reddy
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/neha-reddy.png" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/neha-reddy.png" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 Culture and Human Rights: Narratives of Ethiopian Identity
           p
             strong Neha Reddy
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/neha-reddy") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Neha Reddy discusses the hidden opportunities for forward progression that culture and human rights pose if we think of them in a new light, capitalizing on the capabilities rather than focusing solely on the differences.
+          p Neha Reddy discusses the hidden opportunities for forward progression that culture and human rights pose if we think of them in a new light, capitalizing on the capabilities rather than focusing solely on the differences.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/QdUf2eJMtSE?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
       //- Xavier McElrath-Bey
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/xavier-mcelrath-bey.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/xavier-mcelrath-bey.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 No Child is Born Bad
           p
             strong Xavier McElrath-Bey
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/xavier-mcelrath-bey") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") In his talk, Xavier McElrath-Bey will explore the important need for at-risk youth to “cross paths” with positive people and processes in order to deter them from deviant and destructive lifestyles; just as negative influences and unfair processes can potentially reinforce negative behaviors.
+          
+          p In his talk, Xavier McElrath-Bey will explore the important need for at-risk youth to “cross paths” with positive people and processes in order to deter them from deviant and destructive lifestyles; just as negative influences and unfair processes can potentially reinforce negative behaviors.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/51AqpgPCyGI?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
 
       //- Zack Johnson
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/zack-johnson.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/zack-johnson.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 Relationship Analytics are Changing the Way We Manage Businesses
           p
             strong Zack Johnson
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/zack-johnson") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") Everyone knows about how social networks have forever changed our personal lives, but are we ready for the paradigm shift they are bringing to the business world? In his talk, Zack Johnson will demonstrate how managers will be able to make the intangible aspects of business management tangible, and in doing so run better, more agile organizations.
+          p Everyone knows about how social networks have forever changed our personal lives, but are we ready for the paradigm shift they are bringing to the business world? In his talk, Zack Johnson will demonstrate how managers will be able to make the intangible aspects of business management tangible, and in doing so run better, more agile organizations.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/MLaQotcqOxo?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
 
       //- Stephen Dowling
       div(class="row speaker-row")
-        div(class="span2 offset2")
-          img(class="speaker_pic" src="../images/speaker-pics/stephen-dowling.jpg" alt="...")
+        //- div(class="span2 offset2")
+        //-   img(class="speaker_pic" src="../images/speaker-pics/stephen-dowling.jpg" alt="...")
 
-        div(class="span4")
+        div(class="span4 offset1")
           h3 Teachers: Let's Cross Paths More Often
           p
             strong Stephen Dowling
-          button(class="btn speaker-btn")
-            a(class="homepage-section-btn" href="speaker/stephen-dowling") Learn more about this talk and speaker
-        div(class="span4")
-          p(class="lead") We access, accumulate, and experience knowledge in fundamentally different ways than in the 20th century. In his talk, Stephen Dowling advocates that these changes should prompt a discussion about how teachers design curricula and plan instruction.
-    
+          p We access, accumulate, and experience knowledge in fundamentally different ways than in the 20th century. In his talk, Stephen Dowling advocates that these changes should prompt a discussion about how teachers design curricula and plan instruction.
+        div(class="span6")
+          div(class="flex-video widescreen")
+            <iframe src="//www.youtube.com/embed/_4mN7dwfQp8?list=PLr8hP96p9XTryJ_hJv20J5PSxrPHQFkSS" frameborder="0" allowfullscreen=""></iframe>
 
 
 

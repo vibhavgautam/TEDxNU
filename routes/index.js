@@ -38,6 +38,9 @@ module.exports = function(app, mongoose, submissionmodel) {
   app.get('/speakers', function(req, res){
     res.render('speakers', {});
   });
+  app.get('/talks', function(req, res){
+    res.render('speakers', {});
+  });
 
   // Individual speaker pages
   // app.get('/speaker/:name', function(req, res){
