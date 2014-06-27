@@ -1,7 +1,11 @@
+DB_USER = ENV['DB_USER'];
+DB_PASS = ENV['DB_PASS'];
+
+console.log(DB_USER);
 
 // Mongoose database stuff
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://cdmcmahon:f0rtun3!@ds061148.mongolab.com:61148/tedxdb');
+mongoose.connect('mongodb://' + DB_USER + ':' + DB_PASS + '@ds061148.mongolab.com:61148/tedxdb');
 //mongoose.connect('mongodb://localhost/tedxdb');
 var Schema = mongoose.Schema;
 
